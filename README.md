@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# calendar-vue
+=======
+>>>>>>> c39acb5 (start calendar)
 # calendar-vue
 
 This template should help get you started developing with Vue 3 in Vite.
@@ -37,3 +43,7 @@ npm run build
 ```sh
 npm run lint
 ```
+<<<<<<< HEAD
+=======
+>>>>>>> a8096b5 (calendar start)
+>>>>>>> c39acb5 (start calendar)
