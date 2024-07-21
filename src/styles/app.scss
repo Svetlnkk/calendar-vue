@@ -1,0 +1,39 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: var(--font-weigh);
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  cursor: default;
+}
+
+b {
+  font-weight: var(--font-weight-bold);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+@for $i from 1 through 50 {
+  .mx-#{$i} {
+    margin-inline: #{$i}px;
+  }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
