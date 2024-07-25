@@ -1,0 +1,58 @@
+.p-inputnumber {
+  width: 100%;
+
+  &:has(input[disabled]) {
+    pointer-events: none;
+  }
+
+  &.p-invalid {
+    color: var(--danger-color);
+
+    .p-inputtext {
+      border-bottom-color: var(--danger-color);
+    }
+  }
+
+  &[filled='true'] {
+    &:hover {
+      .p-inputtext {
+        border-color: var(--border-hover-color);
+      }
+    }
+
+    &:focus-within {
+      .p-inputtext {
+        border-color: var(--primary-color);
+      }
+    }
+
+    &.p-invalid {
+      .p-inputtext {
+        border-color: var(--danger-color);
+      }
+    }
+
+    .p-inputtext {
+      border: 1px solid var(--border-color);
+      border-radius: var(--border-radius);
+    }
+  }
+}
+
+.p-inputnumber[size='large'] {
+  .p-inputtext {
+    height: var(--input-lg-height);
+    font-size: var(--input-lg-font-size);
+    padding-block: var(--input-lg-pad-block);
+    padding-inline: var(--input-lg-pad-inline);
+  }
+}
+
+.p-inputnumber[size='small'] {
+  .p-inputtext {
+    height: var(--input-sm-height);
+    font-size: var(--input-sm-font-size);
+    padding-block: var(--input-sm-pad-block);
+    padding-inline: var(--input-sm-pad-inline);
+  }
+}
