@@ -1,0 +1,288 @@
+.p-button {
+  overflow: unset;
+  gap: var(--btn-gap);
+  height: var(--btn-height);
+  font-size: var(--btn-font-size);
+  color: var(--primary-text-color);
+  transition: var(--el-transition);
+  border-radius: var(--border-radius);
+  padding-block: var(--btn-pad-block);
+  padding-inline: var(--btn-pad-inline);
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-weight: var(--font-weight-bold);
+  justify-content: center;
+
+  &[icon-right='true'] {
+    flex-direction: row-reverse;
+  }
+
+  &:enabled:hover {
+    background-color: var(--primary-dark-color);
+    border-color: var(--primary-dark-color);
+  }
+
+  &:enabled:active {
+    background-color: var(--primary-darken-color);
+    border-color: var(--primary-darken-color);
+  }
+
+  &:focus {
+    @include focused();
+  }
+
+  &:disabled {
+    opacity: var(--disabled-opacity);
+  }
+
+  &.p-button-outlined {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:enabled:hover {
+      background-color: var(--bg-color);
+      border-color: var(--primary-dark-color);
+    }
+
+    &:enabled:active {
+      background-color: var(--bg-color);
+      border-color: var(--primary-darken-color);
+    }
+  }
+
+  &.p-button-ghost {
+    background-color: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+
+    &:enabled:hover {
+      background-color: transparent;
+      border-color: var(--primary-dark-color);
+    }
+
+    &:enabled:active {
+      background-color: transparent;
+      border-color: var(--primary-darken-color);
+    }
+  }
+
+  &.p-button-link {
+    @include link-button();
+
+    .p-button-loading-icon {
+      display: none;
+    }
+  }
+
+  &.p-button-icon-only {
+    height: var(--btn-icon-only-size);
+    width: var(--btn-icon-only-size);
+    padding: 0;
+
+    .p-button-label {
+      display: none;
+    }
+  }
+
+  &.p-button-text {
+    @include text-button();
+  }
+
+  &.p-overlay-badge {
+    overflow: unset;
+  }
+
+  svg.svg-icon {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+  }
+
+  .p-icon-spin {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+    animation-duration: var(--spin-duration);
+  }
+
+  .p-badge {
+    padding: 0;
+    font-size: var(--btn-badge-font-size);
+    min-width: var(--btn-badge-size);
+    height: var(--btn-badge-size);
+    line-height: var(--btn-badge-size);
+  }
+
+  .p-button-label {
+    flex: unset;
+  }
+
+  &.p-button-sm {
+    gap: var(--btn-sm-gap);
+    height: var(--btn-sm-height);
+    font-size: var(--btn-sm-font-size);
+    padding-block: var(--btn-sm-pad-block);
+    padding-inline: var(--btn-sm-pad-inline);
+
+    &.p-button-icon-only {
+      height: var(--btn-sm-icon-only-size);
+      width: var(--btn-sm-icon-only-size);
+      padding: 0;
+
+      .p-button-label {
+        display: none;
+      }
+    }
+
+    &.p-button-link {
+      @include link-button();
+
+      .p-button-loading-icon {
+        display: none;
+      }
+    }
+
+    &.p-button-text {
+      @include text-button();
+    }
+
+    .p-icon-spin {
+      width: var(--btn-sm-icon-size);
+      height: var(--btn-sm-icon-size);
+    }
+
+    .p-badge {
+      font-size: var(--btn-sm-badge-font-size);
+      min-width: var(--btn-sm-badge-size);
+      height: var(--btn-sm-badge-size);
+      line-height: var(--btn-sm-badge-size);
+    }
+
+    svg.svg-icon {
+      width: var(--btn-sm-icon-size);
+      height: var(--btn-sm-icon-size);
+    }
+  }
+
+  &.p-button-lg {
+    gap: var(--btn-lg-gap);
+    height: var(--btn-lg-height);
+    font-size: var(--btn-lg-font-size);
+    padding-block: var(--btn-lg-pad-block);
+    padding-inline: var(--btn-lg-pad-inline);
+
+    &.p-button-icon-only {
+      padding: 0;
+      height: var(--btn-lg-icon-only-size);
+      width: var(--btn-lg-icon-only-size);
+
+      .p-button-label {
+        display: none;
+      }
+    }
+
+    &.p-button-link {
+      @include link-button();
+
+      .p-button-loading-icon {
+        display: none;
+      }
+    }
+
+    &.p-button-text {
+      @include text-button();
+    }
+
+    .p-icon-spin {
+      width: var(--btn-lg-icon-size);
+      height: var(--btn-lg-icon-size);
+    }
+
+    .p-badge {
+      font-size: var(--btn-lg-badge-font-size);
+      min-width: var(--btn-lg-badge-size);
+      height: var(--btn-lg-badge-size);
+      line-height: var(--btn-lg-badge-size);
+    }
+
+    svg.svg-icon {
+      width: var(--btn-lg-icon-size);
+      height: var(--btn-lg-icon-size);
+    }
+  }
+}
+
+.p-button.p-button-danger,
+.p-buttonset.p-button-danger > .p-button,
+.p-splitbutton.p-button-danger > .p-button {
+  color: var(--danger-text-color);
+  background-color: var(--danger-color);
+  border-color: var(--danger-color);
+
+  &:enabled:hover {
+    background-color: var(--danger-dark-color);
+    border-color: var(--danger-dark-color);
+  }
+
+  &:enabled:active {
+    background-color: var(--danger-darken-color);
+    border-color: var(--danger-darken-color);
+  }
+
+  &.p-button-outlined {
+    background-color: var(--bg-color);
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+
+    &:enabled:hover {
+      background-color: var(--bg-color);
+      border-color: var(--danger-dark-color);
+    }
+
+    &:enabled:active {
+      background-color: var(--danger-50);
+      border-color: var(--danger-darken-color);
+    }
+  }
+
+  &.p-button-ghost {
+    background-color: transparent;
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+
+    &:enabled:hover {
+      background-color: transparent;
+      border-color: var(--danger-dark-color);
+    }
+
+    &:enabled:active {
+      background-color: transparent;
+      border-color: var(--danger-darken-color);
+    }
+  }
+
+  &.p-button-link {
+    @include link-button(var(--danger-color), var(--danger-dark-color));
+  }
+
+  &.p-button-text {
+    @include text-button(var(--danger-color), var(--danger-dark-color));
+  }
+}
+
+.p-button.p-button-info,
+.p-buttonset.p-button-info > .p-button,
+.p-splitbutton.p-button-info > .p-button {
+  color: var(--info-text-color);
+  background-color: var(--info-color);
+  border-color: var(--info-color);
+
+  &:enabled:hover {
+    background-color: var(--info-dark-color);
+    border-color: var(--info-dark-color);
+  }
+
+  &:enabled:active {
+    background-color: var(--info-darken-color);
+    border-color: var(--info-darken-color);
+  }
+}

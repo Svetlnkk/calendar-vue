@@ -1,0 +1,112 @@
+.form-input {
+  position: relative;
+
+  .form-input-label {
+    margin-bottom: 8px;
+    position: relative;
+    width: fit-content;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .form-input-error {
+    color: var(--danger-color);
+    position: absolute;
+    bottom: calc(var(--font-size-sm) * -1 - 4px);
+    line-height: 1;
+    right: 0;
+    font-size: var(--font-size-sm);
+  }
+
+  &.form-input-required {
+    .form-input-label::after {
+      content: '';
+      height: 12px;
+      position: absolute;
+      top: 0;
+      right: -16px;
+      width: 12px;
+      padding: 2px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      color: var(--bg-color);
+      background-image: url('/images/svg/star.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-origin: content-box;
+    }
+  }
+}
+
+.form-input-option {
+  .form-input-item {
+    display: flex;
+    flex-direction: row;
+    column-gap: 28px;
+    row-gap: 8px;
+    flex-wrap: wrap;
+    padding-top: var(--input-pad-block);
+  }
+
+  .option-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .option-item-label {
+    white-space: pre-wrap;
+    cursor: pointer;
+  }
+}
+
+.form-input-price {
+  .form-input-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .p-input-dropdown-price {
+    width: 60px;
+    padding-inline: 5px;
+    justify-content: space-around;
+    border-bottom-color: var(--primary-color);
+    color: var(--primary-color);
+
+    &:not(.p-disabled):hover {
+      border-bottom-color: var(--primary-color);
+    }
+  }
+
+  .p-dropdown-trigger {
+    padding-inline: 0;
+    color: var(--primary-color);
+  }
+
+  .p-dropdown-label.p-inputtext {
+    padding: 0;
+    width: auto;
+    flex: unset;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .p-invalid {
+    .p-inputnumber {
+      color: var(--danger-color);
+    }
+
+    .p-inputtext {
+      border-bottom-color: var(--danger-color);
+    }
+
+    .p-input-dropdown-price {
+      color: var(--danger-color);
+      border-bottom-color: var(--danger-color);
+    }
+
+    .p-dropdown-trigger {
+      color: var(--danger-color);
+    }
+  }
+}

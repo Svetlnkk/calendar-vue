@@ -1,0 +1,34 @@
+$slide-time: 4s;
+
+// ____ slide-left ____
+
+.slide-left-enter-active {
+  transition: all $slide-time;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+// ____ slide-right ____
+
+.slide-right-enter-active {
+  transition: all $slide-time;
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+// ____ slide-top ____
+
+.slide-top-enter-active {
+  transition: all $slide-time;
+}
+
+.slide-top-enter-from {
+  opacity: 0;
+  transform: translateY(-20px);
+}

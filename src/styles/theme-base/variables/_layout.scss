@@ -1,0 +1,19 @@
+:root {
+  --layout-pad-x: 16px;
+  --layout-pad-y-top: 24px;
+  --layout-pad-y-bottom: 8px;
+
+  @media (min-width: 768px) {
+    --layout-pad-x: 24px;
+    --layout-pad-y-top: 32px;
+  }
+
+  @media (min-width: 1200px) {
+    --layout-pad-x: 32px;
+    --layout-pad-y-top: 64px;
+  }
+
+  @media (min-width: 1850px) {
+    --layout-pad-x: calc(100% / 2 - 1780px / 2);
+  }
+}
