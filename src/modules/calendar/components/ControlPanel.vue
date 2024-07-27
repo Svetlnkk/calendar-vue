@@ -2,8 +2,6 @@
 import { onBeforeMount, ref } from "vue";
 
 import Calendar from "primevue/calendar";
-import { LANG } from "../../../lib";
-// import calendar from '../composables/mockWorkers';
 
 const emit = defineEmits(["setDate", "updateWorkers"]);
 
@@ -41,8 +39,6 @@ const handleButtonClick = (prev: boolean) => {
       <template #icon> &lt; </template>
     </PrimeButton>
 
-    <!-- <span class="period">{{ currentDate.toLocaleDateString(LANG, { month: 'long' }) }} {{
-      currentDate.toLocaleDateString(LANG, { year: 'numeric' }) }}</span> -->
     <Calendar
       v-model="currentDate"
       view="month"
@@ -56,7 +52,7 @@ const handleButtonClick = (prev: boolean) => {
         <svg-icon name="arr-l" />
       </template>
       <template #nexticon>
-        <!-- <svg-icon name="arr-r" /> -->
+        <svg-icon name="arr-r" />
       </template>
     </Calendar>
 

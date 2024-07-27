@@ -1,47 +1,47 @@
 <script setup>
-import { onBeforeMount, onBeforeUnmount, ref } from 'vue';
+import { onBeforeMount, onBeforeUnmount } from "vue";
 
-const overflow_nodes = document.querySelectorAll('html, body, .main-container');
+const overflow_nodes = document.querySelectorAll("html, body, .main-container");
 
-const emits = defineEmits(['closeModal']);
+const emits = defineEmits(["closeModal"]);
 
 const props = defineProps({
   header: {
     type: String,
-    default: ''
+    default: "",
   },
   close: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 function closeModal() {
-  emits('closeModal');
+  emits("closeModal");
 }
 
 function closeSelectIfOpen() {
   if (!props.close) {
-    const container = document.querySelector('.modal__container');
-    container.style.transform = 'scale(1.05)';
-    container.style.transition = 'transform 0.4s ease-in-out';
+    const container = document.querySelector(".modal__container");
+    container.style.transform = "scale(1.05)";
+    container.style.transition = "transform 0.4s ease-in-out";
 
     container.addEventListener(
-      'transitionend',
+      "transitionend",
       () => {
-        container.style.transform = 'scale(1)';
+        container.style.transform = "scale(1)";
       },
       { once: true }
     );
   } else {
-    emits('closeModal');
+    emits("closeModal");
   }
 }
 
 function toggle_page_overflow(display) {
   overflow_nodes.forEach((node) => {
-    node.style.overflowY = display ? 'initial' : 'hidden';
-    node.style.overflowX = 'clip';
+    node.style.overflowY = display ? "initial" : "hidden";
+    node.style.overflowX = "clip";
   });
 }
 
@@ -58,7 +58,7 @@ onBeforeUnmount(() => {
   <perfect-scrollbar
     class="modal__overlay"
     :options="{
-      suppressScrollX: true
+      suppressScrollX: true,
     }"
     @click.self="closeSelectIfOpen"
   >
@@ -69,11 +69,6 @@ onBeforeUnmount(() => {
             {{ header }}
           </slot>
         </p>
-        <!-- <img
-          class="modal-header__close"
-          src="/images/svg/modal-close.svg"
-          @click="closeModal"
-        /> -->
         <svg-icon
           name="close-modal"
           class="modal-header__close"
@@ -105,7 +100,6 @@ onBeforeUnmount(() => {
   margin: 78px auto 78px;
   height: fit-content;
   background: #fff;
-  // border-radius: 5px;
   border-radius: 30px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -120,12 +114,10 @@ onBeforeUnmount(() => {
 
 .modal-header {
   display: flex;
-  // background: #049be8;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
-  // padding: 8px 16px;
   padding: 24px 24px;
   background: #f3f3f3;
   border-top-left-radius: 30px;
@@ -133,10 +125,8 @@ onBeforeUnmount(() => {
 
   &__title {
     color: #404040;
-    // color: #fff;
     font-family: Nunito Sans;
     font-size: 20px;
-    // font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -171,7 +161,6 @@ onBeforeUnmount(() => {
 
     &__title {
       font-size: 24px;
-      // font-size: 18px;
     }
 
     &__close {
@@ -188,7 +177,6 @@ onBeforeUnmount(() => {
 
   .modal__content {
     padding: 40px 40px;
-    // padding: 48px 40px;
   }
 }
 

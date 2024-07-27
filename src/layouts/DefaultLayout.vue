@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AppHeader from "../components/app/AppHeader.vue";
+import AppNotification from "../components/app/AppNotification.vue";
 </script>
 
 <template>
@@ -12,6 +13,8 @@ import AppHeader from "../components/app/AppHeader.vue";
   >
     <slot />
   </main>
+
+  <AppNotification />
 </template>
 
 <style scoped lang="scss">
@@ -23,7 +26,6 @@ import AppHeader from "../components/app/AppHeader.vue";
 }
 
 ::-webkit-scrollbar {
-  // width: 16px;
   width: 6px;
   height: 16px;
 }
@@ -33,8 +35,8 @@ import AppHeader from "../components/app/AppHeader.vue";
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #049be8;
-  border: 2px solid var(--primary-color);
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
 }
 
 @media screen and (min-width: 768px) {

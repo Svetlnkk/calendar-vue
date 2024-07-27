@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref, onBeforeMount, toRef, onMounted } from "vue";
+import { ref, onBeforeMount } from "vue";
 import { Form } from "vee-validate";
 import Calendar from "primevue/calendar";
 
-// import PdvInputOption from "@/components/form/Pdv_input_option.vue";
+import InputOption from "@/components/InputOption.vue";
+import { useNotificationStore } from "@/stores";
 
-// import { useCalendarStore } from "@/stores";
+const notificationStore = useNotificationStore();
 
 const emit = defineEmits(["closeModal", "sendData"]);
 
@@ -20,8 +21,6 @@ const props = defineProps({
   },
 });
 
-// const calendarStore = useCalendarStore();
-
 const dates = ref();
 const minDate = ref();
 const loading = ref(false);
@@ -32,7 +31,63 @@ const workers: any = ref({
   type: "checkbox",
   name: "workers",
   label: "",
-  options: [],
+  options: [
+    {
+      name: "Алексей Иванов",
+      id: 1,
+      image: null,
+    },
+    {
+      name: "Артём Смирнов",
+      id: 2,
+      image: null,
+    },
+    {
+      name: "Вадим Кузнецов",
+      id: 3,
+      image: null,
+    },
+    {
+      name: "Владимир Попов",
+      id: 4,
+      image: null,
+    },
+    {
+      name: "Светлана Лядова",
+      id: 5,
+      image: null,
+    },
+    {
+      name: "Валентин Васильев",
+      id: 6,
+      image: null,
+    },
+    {
+      name: "Ольга Иванова",
+      id: 7,
+      image: null,
+    },
+    {
+      name: "Иван Петров",
+      id: 8,
+      image: null,
+    },
+    {
+      name: "Данил Соколов",
+      id: 9,
+      image: null,
+    },
+    {
+      name: "Алексей Михайлов",
+      id: 10,
+      image: null,
+    },
+    {
+      name: "Мария Дмитрова",
+      id: 11,
+      image: null,
+    },
+  ],
 });
 
 onBeforeMount(async () => {
@@ -42,16 +97,13 @@ onBeforeMount(async () => {
   if (props.editDate && props.selectedWorkers) {
     workers.value.value = props.selectedWorkers;
   }
-
-  // await calendarStore.listWorkPersons();
-  // workers.value.options = calendarStore.workPersons;
 });
 
 async function handleSubmit(values: any) {
   try {
     loading.value = true;
     if ((!dates.value || dates.value.length === 0) && !props.editDate) {
-      // notificationStore.showError(`Укажите дату`);
+      notificationStore.showError(`Укажите дату`);
       return;
     }
 
@@ -59,13 +111,12 @@ async function handleSubmit(values: any) {
       date: props.editDate ? [props.editDate] : dates.value,
       workers: values.workers,
     };
-    // console.log(data)
     emit("sendData", data);
     emit("closeModal");
-    // notificationStore.showOk('Все хорошо');
+    notificationStore.showOk("Все хорошо");
   } catch (err) {
     console.log("error", err);
-    // notificationStore.showError(`${err}`);
+    notificationStore.showError(`${err}`);
   } finally {
     loading.value = false;
   }
@@ -105,7 +156,7 @@ async function handleSubmit(values: any) {
       <div class="title">Сотрудники:</div>
 
       <div class="content">
-        <!-- <PdvInputOption v-bind="workers" v-model="workers.value" /> -->
+        <InputOption v-bind="workers" v-model="workers.value" />
       </div>
     </div>
 

@@ -9,7 +9,7 @@
 
   .p-datepicker-header {
     margin-bottom: 24px;
-    color: var(--primary-color);
+    color: var(--header-text-color);
 
     .p-datepicker-title {
       display: flex;
@@ -36,7 +36,7 @@
 
         &.p-datepicker-today {
           font-weight: 700;
-          color: var(--primary-color);
+          color: var(--header-text-color);
         }
 
         & > span {

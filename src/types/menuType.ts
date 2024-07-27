@@ -8,7 +8,7 @@ export const menu_types = {
   Calendar: {
     url: "/calendar",
     label: "Календарь",
-    description: "Общий список заявок",
+    description: "Календарь",
     icon: "calendar-icon",
   },
 };

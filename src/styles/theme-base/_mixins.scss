@@ -130,7 +130,7 @@
 
 @mixin scroll-bar(
   $size: 7px,
-  $thumb-color: var(--primary-color),
+  $thumb-color: var(--border-color),
   $track-color: var(--border-color),
   $border-radius: var(--border-radius),
   $track-border-radius: 5px

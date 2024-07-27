@@ -3,28 +3,28 @@
   gap: var(--btn-gap);
   height: var(--btn-height);
   font-size: var(--btn-font-size);
-  color: var(--primary-text-color);
+  color: var(--header-text-color);
   transition: var(--el-transition);
   border-radius: var(--border-radius);
   padding-block: var(--btn-pad-block);
   padding-inline: var(--btn-pad-inline);
-  background-color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background-color: var(--border-color);
+  border: 1px solid var(--border-color);
   font-weight: var(--font-weight-bold);
   justify-content: center;
 
-  &[icon-right='true'] {
+  &[icon-right="true"] {
     flex-direction: row-reverse;
   }
 
   &:enabled:hover {
-    background-color: var(--primary-dark-color);
-    border-color: var(--primary-dark-color);
+    background-color: var(--border-hover-color);
+    border-color: var(--border-hover-color);
   }
 
   &:enabled:active {
-    background-color: var(--primary-darken-color);
-    border-color: var(--primary-darken-color);
+    background-color: var(--border-hover-color);
+    border-color: var(--border-hover-color);
   }
 
   &:focus {
@@ -37,33 +37,33 @@
 
   &.p-button-outlined {
     background-color: var(--bg-color);
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--border-color);
+    border-color: var(--border-color);
 
     &:enabled:hover {
       background-color: var(--bg-color);
-      border-color: var(--primary-dark-color);
+      border-color: var(--border-hover-color);
     }
 
     &:enabled:active {
       background-color: var(--bg-color);
-      border-color: var(--primary-darken-color);
+      border-color: var(--border-hover-color);
     }
   }
 
   &.p-button-ghost {
     background-color: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--border-color);
+    border-color: var(--border-color);
 
     &:enabled:hover {
       background-color: transparent;
-      border-color: var(--primary-dark-color);
+      border-color: var(--border-hover-color);
     }
 
     &:enabled:active {
       background-color: transparent;
-      border-color: var(--primary-darken-color);
+      border-color: var(--border-hover-color);
     }
   }
 

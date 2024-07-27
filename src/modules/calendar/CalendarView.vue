@@ -215,10 +215,6 @@ function sortedWorkers(date: Date) {
           let currentWorkerId = filterCounter[i].id;
           idCount[currentWorkerId] = filterCounter[i].count;
         }
-        // console.log('--------')
-        // console.log("idCount", idCount)
-        // console.log("currentDate", currentDate)
-        // console.log("filterCounter", filterCounter);
 
         let sortedCurrentWorkers = currentWorkers.sort((a: any, b: any) => {
           return idCount[b.id] - idCount[a.id];
@@ -227,7 +223,6 @@ function sortedWorkers(date: Date) {
         let sortedPreviousWorkers = previousWorkers.sort((a: any, b: any) => {
           return idCount[b.id] - idCount[a.id];
         });
-        // console.log("sortedPreviousWorkers", sortedPreviousWorkers)
 
         for (let j = 0; j < sortedPreviousWorkers.length; j++) {
           const previousId = sortedPreviousWorkers[j].id;
@@ -247,9 +242,6 @@ function sortedWorkers(date: Date) {
             }
           }
         }
-
-        // console.log(currentWorker);
-        // console.log("splice CurrentWorkers", sortedCurrentWorkers);
 
         sortFilter[i - 1].workers = sortedPreviousWorkers;
         sortFilter[i].workers = sortedCurrentWorkers;
@@ -287,7 +279,7 @@ function updateCalendar(tempDate: Date, values?: any) {
   const month = tempDate.getMonth();
   const day = tempDate.getDate();
 
-  let yearObj = calendar.calendar.value.find((item) => item.year === year);
+  let yearObj = calendar.calendar.value.find((item: any) => item.year === year);
 
   if (!yearObj) {
     const newYear = {
@@ -298,7 +290,7 @@ function updateCalendar(tempDate: Date, values?: any) {
     yearObj = newYear;
   }
 
-  let monthObj = yearObj.months.find((item) => item.id === month);
+  let monthObj = yearObj.months.find((item: any) => item.id === month);
 
   if (!monthObj) {
     const newMonthObj = { id: month, options: [] };
@@ -324,8 +316,6 @@ function updateCalendar(tempDate: Date, values?: any) {
   dayObj.workers = values;
 
   updateMonthWorkers(dayObj);
-
-  // console.log("calendar.calendar.value", calendar.calendar.value);
 }
 
 function newWorkers(values: any) {
@@ -369,7 +359,6 @@ function weeksOnMounth() {
     calendarData.value.forEach((day: any, index: any) => {
       currentWeek.push(day);
 
-      //index === calendarData.value.length - 1
       if (calendarData.value) {
         if (
           (index + 1) % daysPerWeek === 0 ||
@@ -398,7 +387,6 @@ function filteredCalendar() {
         }
       }
     }
-    // workersMonth.value.sort((a: any, b: any) => a.date - b.date)
   } else {
     workersMonth.value = [];
   }
@@ -487,7 +475,6 @@ watch(currentIndex, () => {
       class="calendar-container"
       :options="{ suppressScrollY: true }"
     >
-      <!-- <perfect-scrollbar class="vert-scroll"> -->
       <div class="vert-scroll">
         <div class="calendar-list">
           <div class="calendar-navigation">
@@ -529,7 +516,6 @@ watch(currentIndex, () => {
           </div>
         </div>
       </div>
-      <!-- </perfect-scrollbar> -->
     </perfect-scrollbar>
   </div>
 
@@ -618,8 +604,8 @@ watch(currentIndex, () => {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #049be8;
-  border: 2px solid var(--primary-color);
+  background-color: var(--border-color);
+  border: 2px solid var(--border-color);
 }
 
 @media screen and (min-width: 1025px) {

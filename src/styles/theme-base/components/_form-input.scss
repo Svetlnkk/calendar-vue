@@ -19,7 +19,7 @@
 
   &.form-input-required {
     .form-input-label::after {
-      content: '';
+      content: "";
       height: 12px;
       position: absolute;
       top: 0;
@@ -29,7 +29,6 @@
       border-radius: 50%;
       background-color: var(--primary-color);
       color: var(--bg-color);
-      background-image: url('/images/svg/star.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-origin: content-box;

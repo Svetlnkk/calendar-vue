@@ -30,7 +30,6 @@ const pastDate = computed(() => {
 });
 
 const handleTitleClick = (selectedDate: any, workers: any) => {
-  // console.log("workers click", workers)
   emits("titleClick", { selectedDate, workers });
 };
 
@@ -153,7 +152,7 @@ function selectedPeriod() {
 }
 
 function getWorkerColor(workerId: number) {
-  const foundColor = colors.colors.find((item) => item.id === workerId);
+  const foundColor = colors.colors.find((item: any) => item.id === workerId);
   if (foundColor) {
     return foundColor.color;
   } else {
@@ -259,12 +258,9 @@ watch(
   () => props.workersMonth,
   (newValue) => {
     if (newValue) {
-      // console.log("------------")
-      // console.log("newValue", newValue)
       repeatWorker.value = [];
       findRepeatWorkerOnWeek();
       findWorkerDay(newValue);
-      // console.log("newValue after", newValue)
     }
   },
   { deep: true }
@@ -306,7 +302,7 @@ watch(
               alt=""
             />
           </div>
-          <div class="worker__name">{{ worker.name }} {{ worker.id }}</div>
+          <div class="worker__name">{{ worker.name }}</div>
         </div>
       </div>
     </template>

@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const calendar = ref([
   {
@@ -8,274 +8,329 @@ const calendar = ref([
         id: 9,
         options: [
           {
-            date: new Date('2023-10-01'),
+            date: new Date("2023-12-01"),
             workers: [
               {
-                name: 'Артур Абязов',
-                id: 13,
-                image: null
+                name: "Алексей Иванов",
+                id: 1,
+                image: null,
               },
               {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
+                name: "Артём Смирнов",
+                id: 2,
+                image: null,
+              },
+            ],
           },
           {
-            date: new Date('2023-10-10'),
+            date: new Date("2023-12-10"),
             workers: [
               {
-                name: 'Артур Абязов',
-                id: 13,
-                image: null
+                name: "Алексей Иванов",
+                id: 1,
+                image: null,
               },
               {
-                name: 'Кристина Алешина',
-                id: 17,
-                image: null
-              }
-            ]
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+            ],
           },
           {
-            date: new Date('2023-10-31'),
+            date: new Date("2023-12-23"),
             workers: [
               {
-                name: 'Михаил Кондрашин',
-                id: 11,
-                image: null
+                name: "Валентин Васильев",
+                id: 6,
+                image: null,
               },
               {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          }
-        ]
+                name: "Ольга Иванова",
+                id: 7,
+                image: null,
+              },
+              {
+                name: "Иван Петров",
+                id: 8,
+                image: null,
+              },
+            ],
+          },
+        ],
       },
       {
         id: 10,
         options: [
           {
-            date: new Date('2023-11-01'),
+            date: new Date("2024-01-22"),
             workers: [
               {
-                name: 'Михаил Кондрашин',
-                id: 11,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-02'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-03'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-04'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-05'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-06'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-07'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-14'),
-            workers: [
-              {
-                name: 'Артур Абязов',
-                id: 13,
-                image: null
-              },
-              {
-                name: 'Ранис Насыров',
-                id: 18,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-17'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-18'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-19'),
-            workers: [
-              {
-                name: 'Тимофей Котчетков',
-                id: 6,
-                image: null
-              },
-              {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          },
-          {
-            date: new Date('2023-11-30'),
-            workers: [
-              {
-                name: 'Александра Круг',
-                id: 9,
-                image: null
-              },
-              {
-                name: 'Алексей Любченков',
+                name: "Алексей Михайлов",
                 id: 10,
-                image: null
-              }
-            ]
-          }
-        ]
+                image: null,
+              },
+              {
+                name: "Мария Дмитрова",
+                id: 11,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-01-30"),
+            workers: [
+              {
+                name: "Артём Смирнов",
+                id: 2,
+                image: null,
+              },
+              {
+                name: "Вадим Кузнецов",
+                id: 3,
+                image: null,
+              },
+              {
+                name: "Владимир Попов",
+                id: 4,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-02-03"),
+            workers: [
+              {
+                name: "Алексей Иванов",
+                id: 1,
+                image: null,
+              },
+              {
+                name: "Артём Смирнов",
+                id: 2,
+                image: null,
+              },
+              {
+                name: "Вадим Кузнецов",
+                id: 3,
+                image: null,
+              },
+              {
+                name: "Владимир Попов",
+                id: 4,
+                image: null,
+              },
+              {
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-02-04"),
+            workers: [
+              {
+                name: "Валентин Васильев",
+                id: 6,
+                image: null,
+              },
+              {
+                name: "Ольга Иванова",
+                id: 7,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-05-05"),
+            workers: [
+              {
+                name: "Иван Петров",
+                id: 8,
+                image: null,
+              },
+              {
+                name: "Данил Соколов",
+                id: 9,
+                image: null,
+              },
+              {
+                name: "Алексей Михайлов",
+                id: 10,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-06"),
+            workers: [
+              {
+                name: "Данил Соколов",
+                id: 9,
+                image: null,
+              },
+              {
+                name: "Алексей Михайлов",
+                id: 10,
+                image: null,
+              },
+              {
+                name: "Мария Дмитрова",
+                id: 11,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-07"),
+            workers: [
+              {
+                name: "Ольга Иванова",
+                id: 7,
+                image: null,
+              },
+              {
+                name: "Иван Петров",
+                id: 8,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-14"),
+            workers: [
+              {
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+              {
+                name: "Валентин Васильев",
+                id: 6,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-17"),
+            workers: [
+              {
+                name: "Артём Смирнов",
+                id: 2,
+                image: null,
+              },
+              {
+                name: "Вадим Кузнецов",
+                id: 3,
+                image: null,
+              },
+              {
+                name: "Владимир Попов",
+                id: 4,
+                image: null,
+              },
+              {
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-18"),
+            workers: [
+              {
+                name: "Алексей Иванов",
+                id: 1,
+                image: null,
+              },
+              {
+                name: "Вадим Кузнецов",
+                id: 3,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-19"),
+            workers: [
+              {
+                name: "Алексей Иванов",
+                id: 1,
+                image: null,
+              },
+              {
+                name: "Артём Смирнов",
+                id: 2,
+                image: null,
+              },
+            ],
+          },
+          {
+            date: new Date("2024-07-30"),
+            workers: [
+              {
+                name: "Владимир Попов",
+                id: 4,
+                image: null,
+              },
+              {
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+              {
+                name: "Валентин Васильев",
+                id: 6,
+                image: null,
+              },
+            ],
+          },
+        ],
       },
       {
         id: 11,
         options: [
           {
-            date: new Date('2023-12-04'),
+            date: new Date("2024-08-05"),
             workers: [
               {
-                name: 'Артур Абязов',
-                id: 13,
-                image: null
+                name: "Владимир Попов",
+                id: 4,
+                image: null,
               },
               {
-                name: 'Мария Дмитрова',
-                id: 15,
-                image: null
-              }
-            ]
+                name: "Светлана Лядова",
+                id: 5,
+                image: null,
+              },
+              {
+                name: "Валентин Васильев",
+                id: 6,
+                image: null,
+              },
+            ],
           },
           {
-            date: new Date('2023-12-06'),
+            date: new Date("2024-08-05"),
             workers: [
               {
-                name: 'Алексей Любченков',
-                id: 10,
-                image: null
+                name: "Ольга Иванова",
+                id: 7,
+                image: null,
               },
               {
-                name: 'Антон Макаренко',
-                id: 14,
-                image: null
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+                name: "Иван Петров",
+                id: 8,
+                image: null,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ]);
 
 export default { calendar };
